@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CIVITAS</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>CIVITAS</h1>
+
+  <div id="status"></div>
+
+  <div class="panel">
+    <button onclick="workInn()">Work at Inn (4h)</button>
+    <button onclick="labor()">Labor Job (6h)</button>
+    <button onclick="rest()">Rest (6h)</button>
+  </div>
+
+  <div id="log"></div>
+
+  <script src="game.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js');
+    }
+  </script>
+</body>
+</html>
